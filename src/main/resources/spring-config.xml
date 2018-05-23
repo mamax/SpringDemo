@@ -6,7 +6,8 @@
  		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
     <bean id="triangle" class="org.javabrains.Triangle">
-        <constructor-arg value="Equalizer"/>
+        <constructor-arg index="0" value="Equalizer"/>
+        <constructor-arg index="1" value="20"/>
     </bean>
 
 </beans>
