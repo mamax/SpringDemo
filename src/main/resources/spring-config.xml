@@ -26,4 +26,6 @@
         </property>
     </bean>
 
+    <alias name="triangle" alias="triangle-alias"/>
+
 </beans>
