@@ -5,8 +5,12 @@ public class Triangle {
     public String getType() {
         return type;
     }
+//
+//    public void setType(String type) {
+//        this.type = type;
+//    }
 
-    public void setType(String type) {
+    public Triangle(String type) {
         this.type = type;
     }
 

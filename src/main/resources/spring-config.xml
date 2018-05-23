@@ -6,7 +6,7 @@
  		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
     <bean id="triangle" class="org.javabrains.Triangle">
-        <property name="type" value="Equalizer"/>
+        <constructor-arg value="Equalizer"/>
     </bean>
 
 </beans>
