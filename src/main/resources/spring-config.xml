@@ -5,14 +5,7 @@
  		http://www.springframework.org/schema/beans
  		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-    <bean id="triangle" class="org.javabrains.Triangle">
-        <property name="points">
-            <list>
-                <ref bean="pointA"/>
-                <ref bean="pointB"/>
-                <ref bean="pointC"/>
-            </list>
-        </property>
+    <bean id="triangle" class="org.javabrains.Triangle" autowire="byName">
     </bean>
 
     <bean id="pointA" class="org.javabrains.Point">
