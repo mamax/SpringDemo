@@ -6,9 +6,13 @@
  		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
     <bean id="triangle" class="org.javabrains.Triangle">
-        <property name="pointA" ref="pointA"/>
-        <property name="pointB" ref="pointB"/>
-        <property name="pointC" ref="pointC"/>
+        <property name="points">
+            <list>
+                <ref bean="pointA"/>
+                <ref bean="pointB"/>
+                <ref bean="pointC"/>
+            </list>
+        </property>
     </bean>
 
     <bean id="pointA" class="org.javabrains.Point">
