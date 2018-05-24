@@ -8,7 +8,7 @@ public class MainClass {
 //        Triangle triangle = new Triangle();
 
         BeanFactory factory = new ClassPathXmlApplicationContext("spring-config.xml");
-        Triangle triangle = (Triangle) factory.getBean("triangle-alias");
+        Triangle triangle = (Triangle) factory.getBean("triangle1");
         triangle.draw();
     }
 }

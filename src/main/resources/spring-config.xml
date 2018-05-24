@@ -5,7 +5,17 @@
  		http://www.springframework.org/schema/beans
  		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-    <bean id="triangle" class="org.javabrains.Triangle" autowire="byName">
+    <bean id="parenttriangle" class="org.javabrains.Triangle">
+        <property name="pointA" ref="pointA"/>
+    </bean>
+
+    <bean id="triangle1" class="org.javabrains.Triangle" parent="parenttriangle">
+        <property name="pointB" ref="pointB"/>
+        <property name="pointC" ref="pointC"/>
+    </bean>
+
+    <bean id="triangle2" class="org.javabrains.Triangle" parent="parenttriangle">
+        <property name="pointB" ref="pointB"/>
     </bean>
 
     <bean id="pointA" class="org.javabrains.Point">
@@ -21,6 +31,6 @@
         <property name="y" value="20"/>
     </bean>
 
-    <alias name="triangle" alias="triangle-alias"/>
+    <alias name="triangle1" alias="triangle-alias"/>
 
 </beans>
